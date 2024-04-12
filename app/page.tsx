@@ -13,10 +13,8 @@ export default function Home() {
         />
       </div>
 
-      <h2
-        className={`absolute top-20 left-20 text-6xl font-semibold text-black`}
-      >
-        Hi, I'm James!
+      <h2 className="absolute top-20 left-20 text-6xl font-semibold text-black">
+        Hi, I&apos;m James!
       </h2>
       <StickyTabBar />
     </main>

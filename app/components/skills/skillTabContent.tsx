@@ -9,7 +9,7 @@ const SkillTabContent: React.FC<SkillsTabProps> = ({ allSkills }) => {
     <div className="max-w-full w-full mx-auto rounded shadow-lg bg-white p-3 px-14">
       <div className="grid grid-cols-3">
         {allSkills.map((a) => {
-          return <SkillCard skillModel={a} />;
+          return <SkillCard key={a.id} skillModel={a} />;
         })}
       </div>
     </div>

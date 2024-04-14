@@ -53,7 +53,7 @@ const MoviesTvShows: React.FC = () => {
       <div className="overflow-x-auto whitespace-no-wrap w-52 lg:w-full">
         <div className="flex items-center w-full max-w-full">
           {images.map((image) => (
-            <div className="mx-8 flex-shrink-0">
+            <div key={image.title} className="mx-8 flex-shrink-0">
               <Image
                 src={image.path}
                 alt={image.title}

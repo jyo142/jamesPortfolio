@@ -6,8 +6,8 @@ const DoForFunDetails: React.FC = () => {
       <p className="text-left mt-3">
         Believe it or not, I actually do like to code for fun! I enjoy the
         thrill of building new features and seeing them actually be used by
-        others. I've had a lot of crazy ideas in the past, but if I do see an
-        issue that can be solved using software, I will try my best to get
+        others. I&apos;ve had a lot of crazy ideas in the past, but if I do see
+        an issue that can be solved using software, I will try my best to get
         involved! I have some projects that I am working on at the moment that I
         will love to productionize as soon as possible, so stayed tuned for that
         &#128579;. I also have recently started getting involved in the open
@@ -25,7 +25,7 @@ const DoForFunDetails: React.FC = () => {
       <p className="text-left mt-3">
         <b>Fun Fact</b> : I do love collecting all types of different things
         like autographs, action figures, etc. I believe I have over 500 of the
-        funko pop figures, but whos counting &#128541;. I haven't been
+        funko pop figures, but whos counting &#128541;. I haven&apos;t been
         collecting as much recently as I have run out of space in my house, but
         that just inspires me to work harder so I can buy a bigger house hehe.
       </p>

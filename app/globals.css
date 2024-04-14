@@ -17,7 +17,6 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
@@ -120,5 +119,9 @@ body {
   }
   .et-hero-tab {
     font-size: 1rem;
+  }
+
+  .achievement-card {
+    @apply max-w-sm mx-auto rounded shadow-lg bg-white p-5 mt-5 cursor-pointer transform transition-transform duration-300 hover:translate-y-[-15px];
   }
 }

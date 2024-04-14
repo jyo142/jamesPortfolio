@@ -30,7 +30,7 @@ const ContactMeCard = () => {
         >
           <div className="col-span-2">
             <Image
-              src="/linkedin-icon.svg"
+              src="/icons/linkedin-icon.svg"
               alt="LinkedIn Icon"
               width="16"
               height="16"
@@ -48,7 +48,7 @@ const ContactMeCard = () => {
         >
           <div className="col-span-2 ">
             <Image
-              src="/github-icon.svg"
+              src="icons/github-icon.svg"
               alt="Github Icon"
               width="16"
               height="16"

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import ContactMeCard from "./cards/contactMeCard";
+import AboutMeSection from "./sections/aboutme";
 const StickyTabBar = () => {
   const [activeTab, setActiveTab] = useState("");
   const [stickyClass, setStickyClass] = useState("relative");
@@ -91,23 +92,22 @@ const StickyTabBar = () => {
       <main className="et-main">
         <section
           ref={(ref) => (tabRefs.current["tab-skills"] = ref)}
-          className="et-slide"
+          className="flex justify-center min-h-screen bg-gray-200"
           id="tab-skills"
         >
-          <h1>Skills</h1>
+          <h1 className="text-5xl tracking-widest">Skills</h1>
           <h3>something about es6</h3>
         </section>
         <section
           ref={(ref) => (tabRefs.current["tab-about"] = ref)}
-          className="et-slide"
+          className="flex justify-center min-h-screen bg-gray-200"
           id="tab-about"
         >
-          <h1>Q/A</h1>
-          <h3>something about react</h3>
+          <AboutMeSection />
         </section>
         <section
           ref={(ref) => (tabRefs.current["tab-resume"] = ref)}
-          className="et-slide"
+          className="flex justify-center items-center min-h-screen bg-gray-200"
           id="tab-resume"
         >
           <h1>Resume</h1>
@@ -116,7 +116,7 @@ const StickyTabBar = () => {
 
         <section
           ref={(ref) => (tabRefs.current["tab-contact"] = ref)}
-          className="et-slide"
+          className="flex justify-center items-center min-h-screen bg-gray-200"
           id="tab-contact"
         >
           <ContactMeCard />

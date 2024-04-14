@@ -13,9 +13,9 @@ export default function Home() {
         />
       </div>
 
-      <h2 className="absolute top-20 left-20 text-6xl font-semibold text-black">
+      <h1 className="absolute top-20 left-20 text-6xl text-black">
         Hi, I&apos;m James!
-      </h2>
+      </h1>
       <StickyTabBar />
     </main>
   );

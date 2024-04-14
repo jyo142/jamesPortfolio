@@ -124,4 +124,8 @@ body {
   .achievement-card {
     @apply max-w-sm mx-auto rounded shadow-lg bg-white p-5 mt-5 cursor-pointer transform transition-transform duration-300 hover:translate-y-[-15px];
   }
+
+  .skill-card {
+    @apply max-w-sm mx-auto rounded shadow-lg bg-white p-3 px-14 m-5 cursor-pointer transform transition-transform duration-300 hover:translate-y-[-15px];
+  }
 }

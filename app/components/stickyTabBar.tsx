@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import ContactMeCard from "./cards/contactMeCard";
 import AboutMeSection from "./sections/aboutme";
+import SkillsSection from "./sections/skills";
 const StickyTabBar = () => {
   const [activeTab, setActiveTab] = useState("");
   const [stickyClass, setStickyClass] = useState("relative");
@@ -36,7 +37,6 @@ const StickyTabBar = () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const intersectingId = entry.target.getAttribute("id");
-          console.log("I FJP E", intersectingId);
           if (intersectingId) {
             setActiveTab(intersectingId);
           }
@@ -51,6 +51,13 @@ const StickyTabBar = () => {
     });
   };
 
+  const onClickTab = (tabId: string) => {
+    tabRefs.current[tabId]?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <>
       <div className={`et-hero-tabs-container ${stickyClass}`}>
@@ -58,7 +65,7 @@ const StickyTabBar = () => {
           className={`et-hero-tab ${
             activeTab === "tab-skills" ? "et-hero-tab-active" : ""
           }`}
-          href="#tab-skills"
+          onClick={() => onClickTab("tab-skills")}
         >
           Skills
         </a>
@@ -66,7 +73,7 @@ const StickyTabBar = () => {
           className={`et-hero-tab ${
             activeTab === "tab-about" ? "et-hero-tab-active" : ""
           }`}
-          href="#tab-about"
+          onClick={() => onClickTab("tab-about")}
         >
           About
         </a>
@@ -74,7 +81,7 @@ const StickyTabBar = () => {
           className={`et-hero-tab ${
             activeTab === "tab-resume" ? "et-hero-tab-active" : ""
           }`}
-          href="#tab-resume"
+          onClick={() => onClickTab("tab-resume")}
         >
           Resume
         </a>
@@ -83,11 +90,10 @@ const StickyTabBar = () => {
           className={`et-hero-tab ${
             activeTab === "tab-contact" ? "et-hero-tab-active" : ""
           }`}
-          href="#tab-contact"
+          onClick={() => onClickTab("tab-contact")}
         >
           Contact
         </a>
-        <span className="et-hero-tab-slider"></span>
       </div>
       <main className="et-main">
         <section
@@ -95,8 +101,7 @@ const StickyTabBar = () => {
           className="flex justify-center min-h-screen bg-gray-200"
           id="tab-skills"
         >
-          <h1 className="text-5xl tracking-widest">Skills</h1>
-          <h3>something about es6</h3>
+          <SkillsSection />
         </section>
         <section
           ref={(ref) => (tabRefs.current["tab-about"] = ref)}

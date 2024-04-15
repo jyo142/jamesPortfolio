@@ -7,8 +7,8 @@ interface AchievementCardProps {
 
 const SkillCard: React.FC<AchievementCardProps> = ({ skillModel }) => {
   return (
-    <div className="skill-card">
-      <div className="flex justify-center">
+    <div className="skill-card px-3 md:px-5 lg:px-14 flex flex-col justify-center items-center">
+      <div>
         <Image
           src={skillModel.filePath}
           alt="James Cover photo"
@@ -16,7 +16,7 @@ const SkillCard: React.FC<AchievementCardProps> = ({ skillModel }) => {
           height="100"
         />
       </div>
-      <div className="flex justify-center">{skillModel.skillTitle}</div>
+      <div>{skillModel.skillTitle}</div>
     </div>
   );
 };

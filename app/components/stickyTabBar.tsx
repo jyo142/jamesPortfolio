@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import ContactMeCard from "./cards/contactMeCard";
 import AboutMeSection from "./sections/aboutme";
+import ResumeSection from "./sections/resume";
 import SkillsSection from "./sections/skills";
 const StickyTabBar = () => {
   const [activeTab, setActiveTab] = useState("");
@@ -112,11 +113,10 @@ const StickyTabBar = () => {
         </section>
         <section
           ref={(ref) => (tabRefs.current["tab-resume"] = ref)}
-          className="flex justify-center items-center min-h-screen bg-gray-200"
+          className="flex justify-center min-h-screen bg-gray-200"
           id="tab-resume"
         >
-          <h1>Resume</h1>
-          <h3>something about flexbox</h3>
+          <ResumeSection />
         </section>
 
         <section

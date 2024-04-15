@@ -13,11 +13,26 @@ const SkillsSection = () => {
   const renderTabContent = () => {
     switch (activeTab) {
       case "frontend":
-        return <SkillTabContent allSkills={frontendSkills} />;
+        return (
+          <SkillTabContent
+            skillTitle="Frontend Skills"
+            allSkills={frontendSkills}
+          />
+        );
       case "backend":
-        return <SkillTabContent allSkills={backendSkills} />;
+        return (
+          <SkillTabContent
+            skillTitle="Backend Skills"
+            allSkills={backendSkills}
+          />
+        );
       case "toolsprocesses":
-        return <SkillTabContent allSkills={toolsProcesses} />;
+        return (
+          <SkillTabContent
+            skillTitle="Tools and Processes"
+            allSkills={toolsProcesses}
+          />
+        );
       default:
         return null; // Handle unexpected tab IDs gracefully
     }

@@ -48,6 +48,11 @@ export const frontendSkills: SkillModel[] = [
     filePath: "frontend/react.svg",
   },
   {
+    id: "expoSkill",
+    skillTitle: "Expo / EAS",
+    filePath: "frontend/expo.svg",
+  },
+  {
     id: "nextjsSkill",
     skillTitle: "NextJS",
     filePath: "frontend/nextjs.svg",
@@ -71,5 +76,76 @@ export const frontendSkills: SkillModel[] = [
     id: "jestSkill",
     skillTitle: "Jest",
     filePath: "frontend/jest.svg",
+  },
+];
+
+export const backendSkills: SkillModel[] = [
+  {
+    id: "nodejs",
+    skillTitle: "NodeJS",
+    filePath: "backend/nodejs.svg",
+  },
+  {
+    id: "csharp",
+    skillTitle: "C#",
+    filePath: "backend/csharp.svg",
+  },
+  {
+    id: "dotnet",
+    skillTitle: ".NET",
+    filePath: "backend/dotnet.svg",
+  },
+  {
+    id: "azure",
+    skillTitle: "Azure",
+    filePath: "backend/azure.svg",
+  },
+  {
+    id: "aws",
+    skillTitle: "AWS",
+    filePath: "backend/aws.svg",
+  },
+  {
+    id: "firebase",
+    skillTitle: "Firebase",
+    filePath: "backend/firebase.svg",
+  },
+  {
+    id: "sql",
+    skillTitle: "SQL",
+    filePath: "backend/sql.svg",
+  },
+  {
+    id: "postgresql",
+    skillTitle: "PostgresQL",
+    filePath: "backend/postgresql.svg",
+  },
+];
+
+export const toolsProcesses: SkillModel[] = [
+  {
+    id: "scrum",
+    skillTitle: "Scrum / Scrum Master",
+    filePath: "toolsprocesses/scrum.svg",
+  },
+  {
+    id: "githubactions",
+    skillTitle: "Github Actions",
+    filePath: "toolsprocesses/githubactions.svg",
+  },
+  {
+    id: "jenkins",
+    skillTitle: "Jenkins",
+    filePath: "toolsprocesses/jenkins.svg",
+  },
+  {
+    id: "jira",
+    skillTitle: "Jira",
+    filePath: "toolsprocesses/jira.svg",
+  },
+  {
+    id: "retool",
+    skillTitle: "Retool",
+    filePath: "toolsprocesses/retool.svg",
   },
 ];

@@ -1,6 +1,10 @@
 "use client";
 import { useState } from "react";
-import { frontendSkills } from "@/app/models/skillModel";
+import {
+  backendSkills,
+  frontendSkills,
+  toolsProcesses,
+} from "@/app/models/skillModel";
 import SkillsTab from "../skills/skillsTab";
 import SkillTabContent from "../skills/skillTabContent";
 
@@ -11,9 +15,9 @@ const SkillsSection = () => {
       case "frontend":
         return <SkillTabContent allSkills={frontendSkills} />;
       case "backend":
-        return <SkillTabContent allSkills={[]} />;
+        return <SkillTabContent allSkills={backendSkills} />;
       case "toolsprocesses":
-        return <SkillTabContent allSkills={[]} />;
+        return <SkillTabContent allSkills={toolsProcesses} />;
       default:
         return null; // Handle unexpected tab IDs gracefully
     }

@@ -13,8 +13,11 @@ export default function Home() {
         />
       </div>
 
-      <h1 className="absolute top-20 left-20 text-6xl text-black">
+      <h1 className="absolute top-20 left-10 text-2xl lg:text-6xl text-black">
         Hi, I&apos;m James!
+      </h1>
+      <h1 className="absolute top-80 right-10 text-2xl lg:text-6xl text-black">
+        and Barry &#128054;
       </h1>
       <StickyTabBar />
     </main>

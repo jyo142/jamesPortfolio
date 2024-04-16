@@ -1,6 +1,4 @@
 "use client";
-import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
 interface AchievementCardProps {
   titleComponent: React.ComponentType;
   imageComponent: React.ComponentType;

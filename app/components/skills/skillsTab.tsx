@@ -1,14 +1,17 @@
 "use client";
-import { SkillModel } from "@/app/models/skillModel";
+import Image from "next/image";
+
 interface SkillsTabProps {
   tabId: string;
   tabTitle: string;
   currentActiveTab: string;
+  iconPath: string;
   setActiveTab: (newTab: string) => void;
 }
 const SkillsTab: React.FC<SkillsTabProps> = ({
   tabId,
   tabTitle,
+  iconPath,
   currentActiveTab,
   setActiveTab,
 }) => {
@@ -16,11 +19,13 @@ const SkillsTab: React.FC<SkillsTabProps> = ({
     <a
       onClick={() => setActiveTab(tabId)}
       aria-current="page"
-      className={`cursor-pointer inline-block p-4 ${
+      className={`cursor-pointer space-x-1 p-4 flex items ${
         currentActiveTab === tabId ? "bg-white" : "bg-gray"
       }`}
     >
-      <p>{tabTitle}</p>
+      <Image src={iconPath} alt={`${tabTitle} icon`} width="16" height="16" />
+      <div className="sr-only">{`${tabTitle} tab`}</div>
+      <p className="hidden md:block">{tabTitle}</p>
     </a>
   );
 };

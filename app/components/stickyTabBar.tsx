@@ -61,9 +61,9 @@ const StickyTabBar = () => {
 
   return (
     <>
-      <div className={`et-hero-tabs-container ${stickyClass}`}>
+      <div className={`cursor-pointer et-hero-tabs-container ${stickyClass}`}>
         <a
-          className={`et-hero-tab ${
+          className={`cursor-pointer et-hero-tab ${
             activeTab === "tab-skills" ? "et-hero-tab-active" : ""
           }`}
           onClick={() => onClickTab("tab-skills")}
@@ -71,7 +71,7 @@ const StickyTabBar = () => {
           Skills
         </a>
         <a
-          className={`et-hero-tab ${
+          className={`cursor-pointer et-hero-tab ${
             activeTab === "tab-about" ? "et-hero-tab-active" : ""
           }`}
           onClick={() => onClickTab("tab-about")}
@@ -79,7 +79,7 @@ const StickyTabBar = () => {
           About
         </a>
         <a
-          className={`et-hero-tab ${
+          className={`cursor-pointer et-hero-tab ${
             activeTab === "tab-resume" ? "et-hero-tab-active" : ""
           }`}
           onClick={() => onClickTab("tab-resume")}
@@ -88,7 +88,7 @@ const StickyTabBar = () => {
         </a>
 
         <a
-          className={`et-hero-tab ${
+          className={`cursor-pointer et-hero-tab ${
             activeTab === "tab-contact" ? "et-hero-tab-active" : ""
           }`}
           onClick={() => onClickTab("tab-contact")}

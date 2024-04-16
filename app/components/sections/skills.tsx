@@ -56,7 +56,7 @@ const SkillsSection = () => {
     }
   };
   return (
-    <div className=" w-full lg:max-w-full m-5">
+    <div className=" w-full lg:max-w-full m-8">
       <h1 className="flex justify-center text-5xl tracking-widest">Skills</h1>
       <p className="flex justify-center mt-3 mb-2">
         Click or tap on each of the skill cards to discover how I&apos;ve

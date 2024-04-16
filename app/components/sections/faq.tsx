@@ -45,7 +45,7 @@ const FrequentlyAskedQuestionsSection = () => {
   }, []);
 
   return (
-    <div className="text-center">
+    <div className="text-center mt-8">
       <h1 className="text-5xl tracking-widest mb-5">FAQs</h1>
       <div>Here are some fun little FAQs about me</div>
       {curFaqInfo.map((faq) => {

@@ -10,7 +10,6 @@ const ContactMeCard = () => {
           alt="LinkedIn Icon"
           width="150"
           height="150"
-          loading="lazy"
         />
       </div>
       <div className="mt-5 flex justify-center">
@@ -35,7 +34,6 @@ const ContactMeCard = () => {
               alt="LinkedIn Icon"
               width="28"
               height="28"
-              loading="lazy"
             />
           </div>
         </a>
@@ -51,7 +49,6 @@ const ContactMeCard = () => {
               alt="Github Icon"
               width="28"
               height="28"
-              loading="lazy"
             />
           </div>
         </a>

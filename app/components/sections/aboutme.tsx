@@ -78,12 +78,12 @@ const AboutMeSection = () => {
           imageComponent={() => (
             <Image
               src="/duolingo.gif"
-              alt="Lutheran High School of Hawaii Logo"
+              alt="Duolingo Logo"
               width="150"
               height="150"
             />
           )}
-          hrefLink="https://en.wikipedia.org/wiki/Lutheran_High_School_of_Hawaii"
+          hrefLink="https://www.duolingo.com/profile/James439047"
         />
         <AchievementCard
           titleComponent={() => <h2 className="text-2xl">CodeWars</h2>}

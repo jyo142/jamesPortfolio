@@ -8,7 +8,7 @@ interface FAQCardProps {
 }
 const FAQCard: React.FC<FAQCardProps> = ({ faqModel, onToggle }) => {
   return (
-    <div className="mx-auto rounded shadow-lg bg-white p-3 px-14 curs m-3">
+    <div className="mx-auto rounded shadow-lg bg-white p-3 px-8 curs m-3">
       <div
         className="flex justify-between cursor-pointer"
         onClick={() => onToggle(faqModel.id)}

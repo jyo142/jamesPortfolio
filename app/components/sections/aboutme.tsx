@@ -34,6 +34,7 @@ const AboutMeSection = () => {
               alt="Boyscouts of America logo"
               width="150"
               height="150"
+              loading="lazy"
             />
           )}
           hrefLink="https://en.wikipedia.org/wiki/Eagle_Scout"
@@ -50,6 +51,7 @@ const AboutMeSection = () => {
               alt="Lutheran High School of Hawaii Logo"
               width="150"
               height="150"
+              loading="lazy"
             />
           )}
           hrefLink="https://en.wikipedia.org/wiki/Lutheran_High_School_of_Hawaii"
@@ -62,7 +64,13 @@ const AboutMeSection = () => {
             </h2>
           )}
           imageComponent={() => (
-            <Image src="/kendo.gif" alt="Kendo Gif" width="150" height="150" />
+            <Image
+              src="/kendo.gif"
+              alt="Kendo Gif"
+              width="150"
+              height="150"
+              loading="lazy"
+            />
           )}
           hrefLink="https://en.wikipedia.org/wiki/Kendo"
         />
@@ -81,6 +89,7 @@ const AboutMeSection = () => {
               alt="Duolingo Logo"
               width="150"
               height="150"
+              loading="lazy"
             />
           )}
           hrefLink="https://www.duolingo.com/profile/James439047"

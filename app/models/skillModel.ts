@@ -90,7 +90,7 @@ export const frontendSkills: SkillModel[] = [
     skillTitle: "Flutter",
     filePath: "frontend/flutter.svg",
     description:
-      "'ve used Flutter with Dart to explore cross-platform mobile development, and I can't praise it enough! Flutter's design system, based on Material UI, ensures a consistent UI throughout the entire application, and the Null-Safety feature helps prevent unnecessary errors. I'm excited about the prospect of using Flutter to develop desktop and web applications in the future as well!",
+      "I've used Flutter with Dart to explore cross-platform mobile development, and I can't praise it enough! Flutter's design system, based on Material UI, ensures a consistent UI throughout the entire application, and the Null-Safety feature helps prevent unnecessary errors. I'm excited about the prospect of using Flutter to develop desktop and web applications in the future as well!",
   },
   {
     id: "cypressSkill",
@@ -172,23 +172,28 @@ export const toolsProcesses: SkillModel[] = [
     id: "scrum",
     skillTitle: "Scrum / Scrum Master",
     filePath: "toolsprocesses/scrum.svg",
+    description:
+      "I used Scrum to facilitate our team's agile development process. I appreciate how Scrum divides projects into sprints, each aimed at completing a small, shippable increment of the project. Additionally, I served as Scrum Master, trying to manage the balance between resolving technical debt and implementing new features.",
   },
   {
     id: "githubactions",
     skillTitle: "Github Actions",
     filePath: "toolsprocesses/githubactions.svg",
     description:
-      "I have experience using GitHub Actions for CI/CD environments. I appreciate the ability to trigger workflows based on common GitHub actions like opening or merging a pull request. Additionally, it is very convenient to create custom workflows using YAML.",
+      "I have experience using GitHub Actions for setting up CI/CD pipelines.. I appreciate the ability to trigger workflows based on common GitHub actions like opening or merging a pull request. Additionally, it is very convenient to create custom workflows using YAML.",
   },
   {
     id: "jenkins",
     skillTitle: "Jenkins",
     filePath: "toolsprocesses/jenkins.svg",
+    description: "",
   },
   {
     id: "jira",
     skillTitle: "Jira",
     filePath: "toolsprocesses/jira.svg",
+    description:
+      "Jira was essential for project management as it was able to offer tools for issue and bug tracking. Its seamless integration with agile principles helped us to stay focused on sprint objectives and helped us plan more accurately by keeping track of our sprint velocity",
   },
   {
     id: "retool",

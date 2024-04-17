@@ -12,5 +12,6 @@ export interface MasteryData {
 
 export interface ChampionMastery {
   masteryLevel: number;
+  championId: number;
   championImg: string;
 }

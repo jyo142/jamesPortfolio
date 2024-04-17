@@ -51,12 +51,13 @@ export default async function handler(
     }
     const leagueMasterScore = masteryData[0];
     const championMasterScore = masteryData[1];
-    const result = {
+    const result: MasteryData = {
       totalMasteryScore: leagueMasterScore,
       championMastery: championMasterScore.map((c: any) => {
         const charName = charIdToName.get(c.championId.toString());
         return {
           masteryLevel: c.championLevel,
+          championId: c.championId,
           championImg: charName
             ? `${DDRAGON_CDN_DOMAIN}${DDRAGON_CHAMPION_IMG_ENDPOINT}${charName}.png`
             : null,

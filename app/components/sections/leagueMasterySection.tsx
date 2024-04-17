@@ -15,7 +15,7 @@ const LeagueMasterySection: React.FC<LeagueMasterySectionProps> = ({
       </h2>
       <div className="flex space-x-5 mt-3">
         {masteryData?.championMastery.map((c) => (
-          <LeagueChampMasteryCard championMastery={c} />
+          <LeagueChampMasteryCard key={c.championId} championMastery={c} />
         ))}
       </div>
     </div>

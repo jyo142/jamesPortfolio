@@ -26,7 +26,7 @@ const FavoriteSports: React.FC = () => {
   ];
   return (
     <div>
-      <p>
+      <p className="my-3 text-left">
         As a Seattleite I do have allegiance to the Seattle sports teams!
         However, I do like the Miami Heat because I was a fan of the Big 3 era
         and to show that I am no bandwagoner I still follow the team!

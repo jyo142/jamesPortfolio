@@ -33,7 +33,6 @@ const FAQCard: React.FC<FAQCardProps> = ({ faqModel, onToggle }) => {
         </div>
       </div>
       {faqModel.showDetails && <faqModel.moreDetailsComponent />}
-      {/* Render the component conditionally */}
     </div>
   );
 };

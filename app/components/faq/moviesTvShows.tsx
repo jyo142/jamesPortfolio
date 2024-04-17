@@ -45,7 +45,7 @@ const MoviesTvShows: React.FC = () => {
   ];
   return (
     <div>
-      <p>
+      <p className="my-3 text-left">
         My favorite genres are comedy and action and I guess sometimes
         romcoms...
       </p>

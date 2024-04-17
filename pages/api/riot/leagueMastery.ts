@@ -38,6 +38,10 @@ export default async function handler(
 ) {
   try {
     const { puuid } = req.query;
+    if (!puuid) {
+      res.status(500).json({ error: "invalid parameter" });
+      return;
+    }
     const masteryData = await Promise.all([
       getLeagueMasterScore(puuid),
       getChampionMasterScore(puuid),

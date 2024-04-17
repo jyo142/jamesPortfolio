@@ -12,7 +12,7 @@ import { MasteryData } from "@/models/leagueModel";
 
 export const getLeagueMasterScore = async (leaguePuuid: string) => {
   const response = await axios.get(
-    `${RIOTGAMES_API_DOMAIN}${CHAMPION_MASTERY_SCORE_ENDPOINT}${leaguePuuid}?api_key=${process.env.NEXT_RIOT_API_KEY}`
+    `${RIOTGAMES_API_DOMAIN}${CHAMPION_MASTERY_SCORE_ENDPOINT}${leaguePuuid}?api_key=${process.env.RIOT_API_KEY}`
   );
   return response.data;
 };
@@ -23,7 +23,7 @@ export const getChampionMasterScore = async (leaguePuuid: string) => {
     leaguePuuid
   );
   const response = await axios.get(
-    `${RIOTGAMES_API_DOMAIN}${replaced}?api_key=${process.env.NEXT_RIOT_API_KEY}`
+    `${RIOTGAMES_API_DOMAIN}${replaced}?api_key=${process.env.RIOT_API_KEY}`
   );
   return response.data;
 };

@@ -37,7 +37,7 @@ export default async function handler(
   res: NextApiResponse<MasteryData>
 ) {
   try {
-    const { puuid } = req.query;
+    const puuid: string | undefined = req.query?.puuid as string;
     if (!puuid) {
       res.status(500).json({ error: "invalid parameter" });
       return;

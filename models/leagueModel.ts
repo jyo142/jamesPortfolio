@@ -1,14 +1,14 @@
 export interface LeagueProfileData {
-  profileIconPath: string;
-  riotId: string;
-  summonerLevel: number;
-  puuid: string;
+  profileIconPath?: string;
+  riotId?: string;
+  summonerLevel?: number;
+  puuid?: string;
   error?: string;
 }
 
 export interface MasteryData {
-  totalMasteryScore: number;
-  championMastery: ChampionMastery[];
+  totalMasteryScore?: number;
+  championMastery?: ChampionMastery[];
   error?: string;
 }
 

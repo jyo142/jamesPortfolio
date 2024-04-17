@@ -13,14 +13,21 @@ const LeagueOfLegendsDetails: React.FC = () => {
   const [profileData, setProfileData] = useState<LeagueProfileData>();
   const [masteryData, setMasteryData] = useState<MasteryData>();
 
+  const [isProfileDataError, setIsProfileDataError] = useState(false);
+  const [isMasteryDataError, setIsMasteryError] = useState(false);
+
   const [showMasteryData, setShowMasteryData] = useState<boolean>(false);
   const getProfileData = async () => {
     setIsLoading(true);
     try {
       const response = await axios.get("/api/riot/leagueAccount");
-      setProfileData(response.data);
-      return response;
+      if (response.data.error) {
+        setIsProfileDataError(true);
+      } else {
+        setProfileData(response.data);
+      }
     } catch (e) {
+      setIsProfileDataError(true);
       console.error(e);
     } finally {
       setIsLoading(false);
@@ -44,9 +51,13 @@ const LeagueOfLegendsDetails: React.FC = () => {
       const response = await axios.get(
         "/api/riot/leagueMastery?puuid=" + profileData?.puuid
       );
-      setMasteryData(response.data);
-      return response;
+      if (response.data.error) {
+        setIsMasteryError(true);
+      } else {
+        setMasteryData(response.data);
+      }
     } catch (e) {
+      setIsMasteryError(true);
       console.error(e);
     } finally {
       setIsLoadingMastery(false);
@@ -62,8 +73,10 @@ const LeagueOfLegendsDetails: React.FC = () => {
       <div className="flex justify-center">
         <LoadingIcon /> <p className="ml-2">Loading Mastery Data...</p>
       </div>
-    ) : (
+    ) : !isMasteryDataError ? (
       <LeagueMasterySection masteryData={masteryData} />
+    ) : (
+      <p>Sorry an unexpected error occured querying League of Legends Data</p>
     );
   };
   return (
@@ -78,17 +91,25 @@ const LeagueOfLegendsDetails: React.FC = () => {
             Most Likely! but here are some of my stats that you can compare with
             &#128513;
           </p>
-          <LeagueInfoCard profileData={profileData} />
-          {showMasteryData && (
-            <div className="mb-5">{masteryDataSection()}</div>
+          {isProfileDataError ? (
+            <p>
+              Sorry an unexpected error occured querying League of Legends Data
+            </p>
+          ) : (
+            <>
+              <LeagueInfoCard profileData={profileData} />
+              {showMasteryData && (
+                <div className="mb-5">{masteryDataSection()}</div>
+              )}
+              <button
+                type="button"
+                className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                onClick={toggleMasteryDataSection}
+              >
+                {!showMasteryData ? "View Mastery Data" : "Hide Mastery Data"}
+              </button>
+            </>
           )}
-          <button
-            type="button"
-            className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-            onClick={toggleMasteryDataSection}
-          >
-            {!showMasteryData ? "View Mastery Data" : "Hide Mastery Data"}
-          </button>
         </div>
       )}
     </div>

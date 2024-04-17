@@ -3,11 +3,13 @@ export interface LeagueProfileData {
   riotId: string;
   summonerLevel: number;
   puuid: string;
+  error?: string;
 }
 
 export interface MasteryData {
   totalMasteryScore: number;
   championMastery: ChampionMastery[];
+  error?: string;
 }
 
 export interface ChampionMastery {

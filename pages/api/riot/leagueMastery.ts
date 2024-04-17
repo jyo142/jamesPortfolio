@@ -67,6 +67,6 @@ export default async function handler(
 
     res.status(200).json(result);
   } catch (err) {
-    res.status(500).json({ error: "failed to load data", errorData: err });
+    res.status(500).json({ error: "failed to load data" });
   }
 }

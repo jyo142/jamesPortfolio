@@ -1,5 +1,5 @@
 "use client";
-import { SkillModel } from "@/app/models/skillModel";
+import { SkillModel } from "@/models/skillModel";
 import Image from "next/image";
 import { useContext } from "react";
 import { SkillsContext } from "../sections/skills";

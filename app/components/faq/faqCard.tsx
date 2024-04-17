@@ -1,5 +1,5 @@
 "use client";
-import { FAQModel } from "@/app/models/faqModel";
+import { FAQModel } from "@/models/faqModel";
 import Image from "next/image";
 
 interface FAQCardProps {

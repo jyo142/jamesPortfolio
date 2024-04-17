@@ -1,5 +1,5 @@
 "use client";
-import { SkillModel } from "@/app/models/skillModel";
+import { SkillModel } from "@/models/skillModel";
 import SkillCard from "../cards/skillCard";
 interface SkillsTabProps {
   skillTitle: string;

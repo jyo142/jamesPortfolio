@@ -5,7 +5,7 @@ import {
   frontendSkills,
   SkillModel,
   toolsProcesses,
-} from "@/app/models/skillModel";
+} from "@/models/skillModel";
 import SkillsTab from "../skills/skillsTab";
 import SkillTabContent from "../skills/skillTabContent";
 import { Dialog, Transition } from "@headlessui/react";

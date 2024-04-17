@@ -1,5 +1,5 @@
 "use client";
-import { FAQModel } from "@/app/models/faqModel";
+import { FAQModel } from "@/models/faqModel";
 import { useCallback, useState } from "react";
 import DoForFunDetails from "../faq/doForFunDetails";
 import FAQCard from "../faq/faqCard";

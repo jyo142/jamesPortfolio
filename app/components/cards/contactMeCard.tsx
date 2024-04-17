@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
 const ContactMeCard = () => {
   return (
     <div className="max-w-sm mx-8 rounded shadow-lg bg-white p-3 px-14">

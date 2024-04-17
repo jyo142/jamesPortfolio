@@ -1,7 +1,4 @@
 "use client";
-import Image from "next/image";
-import AchievementCard from "../cards/achievementCard";
-import FrequentlyAskedQuestionsSection from "./faq";
 const ResumeSection = () => {
   return (
     <div className="p-8 text-center w-full h-screen">

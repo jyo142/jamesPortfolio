@@ -1,5 +1,5 @@
 "use client";
-import { ChampionMastery, LeagueProfileData } from "@/models/leagueModel";
+import { ChampionMastery } from "@/models/leagueModel";
 import Image from "next/image";
 
 interface LeagueChampMasteryCardProps {
@@ -8,16 +8,19 @@ interface LeagueChampMasteryCardProps {
 const LeagueChampMasteryCard: React.FC<LeagueChampMasteryCardProps> = ({
   championMastery,
 }) => {
+  if (!championMastery) {
+    return null;
+  }
   return (
     <div className="flex flex-col items-center">
       <Image
-        src={championMastery?.championImg}
+        src={championMastery.championImg}
         alt="James Cover photo"
         width="75"
         height="75"
       />
       <h2 className="text-xl">
-        Mastery Level : {championMastery?.masteryLevel}
+        Mastery Level : {championMastery.masteryLevel}
       </h2>
     </div>
   );

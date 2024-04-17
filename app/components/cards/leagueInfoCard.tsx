@@ -12,7 +12,7 @@ const LeagueInfoCard: React.FC<LeagueInfoCardProps> = ({ profileData }) => {
   return (
     <div className="flex flex-col items-center rounded shadow-lg bg-white p-3 px-8 curs m-3">
       <Image
-        src={profileData.profileIconPath}
+        src={profileData.profileIconPath!}
         alt="James Cover photo"
         width="75"
         height="75"

@@ -14,7 +14,7 @@ const LeagueChampMasteryCard: React.FC<LeagueChampMasteryCardProps> = ({
   return (
     <div className="flex flex-col items-center">
       <Image
-        src={championMastery.championImg}
+        src={championMastery.championImg!}
         alt="James Cover photo"
         width="75"
         height="75"

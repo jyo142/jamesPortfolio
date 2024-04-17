@@ -12,14 +12,14 @@ import { LeagueProfileData } from "@/models/leagueModel";
 
 export const getLeaguePuuid = async () => {
   const response = await axios.get(
-    `${RIOT_API_DOMAIN}${RIOT_BYRIOTID_ENDPOINT}${process.env.NEXT_RIOT_GAMER}/${process.env.NEXT_RIOT_TAG}?api_key=${process.env.NEXT_RIOT_API_KEY}`
+    `${RIOT_API_DOMAIN}${RIOT_BYRIOTID_ENDPOINT}${process.env.RIOT_GAMER}/${process.env.RIOT_TAG}?api_key=${process.env.RIOT_API_KEY}`
   );
   return response.data;
 };
 
 export const getLeagueAccountInfo = async (leaguePuuid: string) => {
   const response = await axios.get(
-    `${RIOTGAMES_API_DOMAIN}${SUMMONER_BY_PUUID_ENDPOINT}${leaguePuuid}?api_key=${process.env.NEXT_RIOT_API_KEY}`
+    `${RIOTGAMES_API_DOMAIN}${SUMMONER_BY_PUUID_ENDPOINT}${leaguePuuid}?api_key=${process.env.RIOT_API_KEY}`
   );
   return response.data;
 };
@@ -39,6 +39,8 @@ export default async function handler(
     };
     res.status(200).json(responseData);
   } catch (err) {
-    res.status(500).json({ error: "failed to load data" });
+    res.status(500).json({
+      error: "failed to load data",
+    });
   }
 }

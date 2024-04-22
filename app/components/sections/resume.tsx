@@ -12,7 +12,7 @@ const ResumeSection = () => {
       >
         <p>
           Your web browser doesn&apos;t have a PDF plugin. Instead you can{" "}
-          <a href="JAMES OKADA RESUME.pdf">
+          <a className="underline" href="JAMES OKADA RESUME.pdf">
             click here to download the PDF file.
           </a>
         </p>

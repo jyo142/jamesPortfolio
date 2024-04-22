@@ -5,7 +5,18 @@ const ResumeSection = () => {
       <h1 className="flex justify-center text-5xl tracking-widest mb-5">
         Resume
       </h1>
-      <embed src="JAMES OKADA RESUME.pdf" className="w-full h-3/4 lg:h-full" />
+      <object
+        data="JAMES OKADA RESUME.pdf"
+        type="application/pdf"
+        className="w-full h-3/4 lg:h-full"
+      >
+        <p>
+          Your web browser doesn't have a PDF plugin. Instead you can{" "}
+          <a href="JAMES OKADA RESUME.pdf">
+            click here to download the PDF file.
+          </a>
+        </p>
+      </object>
     </div>
   );
 };

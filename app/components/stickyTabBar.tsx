@@ -6,7 +6,7 @@ import AboutMeSection from "./sections/aboutme";
 import ResumeSection from "./sections/resume";
 import SkillsSection from "./sections/skills";
 const StickyTabBar = () => {
-  const [activeTab, setActiveTab] = useState("");
+  const [activeTab, setActiveTab] = useState("tab-skills");
   const [stickyClass, setStickyClass] = useState("relative");
   const tabRefs = useRef<{ [key: string]: HTMLElement | null }>({});
 
@@ -31,7 +31,7 @@ const StickyTabBar = () => {
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.5, // Adjust threshold as needed
+      threshold: 0.1, // Adjust threshold as needed
     };
 
     const callback = (entries: any[], observer: any) => {

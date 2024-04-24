@@ -5,6 +5,7 @@ import ContactMeCard from "./cards/contactMeCard";
 import AboutMeSection from "./sections/aboutme";
 import ResumeSection from "./sections/resume";
 import SkillsSection from "./sections/skills";
+import TimelineGame from "./sections/timelineGame";
 const StickyTabBar = () => {
   const [activeTab, setActiveTab] = useState("tab-skills");
   const [stickyClass, setStickyClass] = useState("relative");
@@ -102,7 +103,7 @@ const StickyTabBar = () => {
           className="flex justify-center min-h-screen bg-gray-200"
           id="tab-skills"
         >
-          <SkillsSection />
+          <TimelineGame />
         </section>
         <section
           ref={(ref) => (tabRefs.current["tab-about"] = ref)}
